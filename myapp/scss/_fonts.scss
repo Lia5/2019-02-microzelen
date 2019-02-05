@@ -1,0 +1,11 @@
+@import "_mixins/font-face";
+
+
+@include font-face("Oswald", "../fonts/OswaldRegular/OswaldRegular", 400);
+@include font-face("Oswald", "../fonts/OswaldMedium/OswaldMedium", 500);
+@include font-face("Oswald", "../fonts/OswaldBold/OswaldBold", 700);
+@include font-face("OpenSans", "../fonts/OpenSans/OpenSans", 400);
+@include font-face("OpenSans", "../fonts/OpenSansItalic/OpenSansItalic", 400, italic);
+
+
+

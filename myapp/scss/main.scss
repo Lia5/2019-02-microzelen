@@ -1,0 +1,138 @@
+
+@import "tools/_normalize.scss";
+@import "vars";
+@import "fonts";
+@import "libs";
+
+::placeholder {
+	color: #666;
+}
+
+::selection {
+	background-color: #514949;;
+	color: #fff;
+}
+* {
+	box-sizing: border-box;
+}
+body {
+	font-size: 16px;
+	min-width: 320px;
+	position: relative;
+	line-height: 1;
+	overflow-x: hidden;
+	color: $text;
+	font-family: 'OpenSans', Arial, Helvetica, sans-serif;
+	font-weight: 400;
+	font-style: normal;
+	background-color: #f0ffff;
+	input, textarea {
+		border: #666 1px solid;
+		outline: none;
+		&:focus:required:invalid {
+			border-color: red;
+		}
+		&:required:valid {
+			border-color: green;
+		}
+	}
+}
+.main-wrap {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	min-height: 100vh;
+}
+.img-responsive {
+	display: block;
+	max-width: 100%;
+	height: auto;
+	&.img-width {
+		width: 100%;
+	}
+}
+
+.text-center {
+	text-align: center;
+}
+
+b, strong {
+	font-weight: bold;
+}
+.wrap {
+	max-width: 1300px;
+	margin: 0 auto;
+}
+a {
+	text-decoration: none;
+	color: $text;
+	-webkit-transition: all.6s ease; 
+	-moz-transition: all.6s ease;
+	-ms-transition: all.6s ease; 
+	-o-transition: all.6s ease; 
+	transition: all.6s ease;
+	outline:none !important;
+	border: none;
+	&:hover {
+		outline:none;
+	};
+	&:active {
+		outline:none;
+		-webkit-transition: all.1s ease; 
+		-moz-transition: all.1s ease;
+		-ms-transition: all.1s ease; 
+		-o-transition: all.1s ease; 
+		transition: all.1s ease;
+	};
+}
+ul,li {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.main-title {
+	font-family: 'Oswald', Arial, Helvetica, sans-serif;
+	font-size: 100px;
+	color: #fff;
+	font-weight: 700;
+	margin: 20px 0;
+}
+.subtitle {
+	color: #fff;
+	font-size: 24px;
+	font-weight: 400;
+	letter-spacing: 0.72px;
+}
+.title {
+	color: #000;
+	font-family: 'Oswald', Arial, Helvetica, sans-serif;
+	font-weight: 500;
+	font-size: 40px;
+	text-transform: uppercase;
+	margin-bottom: 37px;
+}
+.btn {
+	position: relative;
+	display: inline-block;
+	font-size: 16px;
+	color: #fff;
+	padding: 24px 50px;
+	transition: 0.5s;
+	cursor: pointer;
+	border-radius: 2px;
+	background-color: #fca67f;
+	border: none;
+	min-width: 160px;
+	text-align: center;
+	margin-top: 30px;
+	&:hover {
+		background-color: rgba(252, 166, 127, 0.8);
+	}
+}
+
+@import "sections/header"; 
+@import "sections/offer"; 
+
+@import "sections/footer"; 
+
+@import "media"; // Always at the end

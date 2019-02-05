@@ -1,0 +1,45 @@
+.offer {
+    padding: 50px 0;
+    &__items {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &__item {
+        position: relative;
+    }
+    .offer__name {
+        position: absolute;
+        left: 21px;
+        bottom: 41px;
+        color: #121212;
+        font-family: 'Oswald', Arial, Helvetica, sans-serif;
+        font-size: 18px;
+        font-weight: 400;
+    }
+    &__item--wrap {
+        width: 25%;
+        padding: 15px;
+        img {
+            width: 100%;
+        }
+    }
+    &__item--text {
+        width: 50%;
+        .offer__item {
+            padding: 18px 33px;
+            border: 4px solid #fca67f;
+            height: 100%;
+        }
+        p {
+            font-size: 18px;
+            font-weight: 400;
+        }
+        
+    }
+    .offer__date {
+        font-family: 'Oswald', Arial, Helvetica, sans-serif;
+        font-weight: 500;
+        font-size: 30px;
+        margin-bottom: 36px;
+    }
+}
