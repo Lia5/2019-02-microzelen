@@ -1,6 +1,5 @@
 $(function() {
 
-
 	//slick reviews
 	if(jQuery('.reviews-slider').length) {
         $('.reviews-slider').slick({
@@ -63,79 +62,6 @@ myMap.behaviors.disable('scrollZoom');
 };
  // end MAP
 
-	// //BEGIN map func
-	// var $window      = $(window);
-	// /* google map
-	// ================================================== */
-	// function _g_map ()
-	// {
-	// 	var maps = $('.g_map');
-
-	// 	if ( maps.length > 0 )
-	// 	{
-	// 		$.getScript('https://maps.googleapis.com/maps/api/js?key=AIzaSyB0wsyY6xwU9aKjmNg2pwGn3a1vchIqyBc&sensor=false&language=ru', function( data, textStatus, jqxhr ) {
-
-	// 			maps.each(function() {
-	// 				var current_map = $(this);
-	// 				var latlng = new google.maps.LatLng(current_map.attr('data-longitude'), current_map.attr('data-latitude'));
-	// 				var point = current_map.attr('data-marker');
-	// 				var markerlatlng = new google.maps.LatLng(current_map.attr('data-markerlng'), current_map.attr('data-markerlat'));
-
-	// 				if (jQuery(window).width() >= 801 ){
-	// 					var myOptions = {
-	// 						zoom: 17,
-	// 						center: latlng,
-	// 						mapTypeId: google.maps.MapTypeId.ROADMAP,
-	// 						mapTypeControl: false,
-	// 						scrollwheel: false,
-	// 						draggable: true,
-	// 						panControl: false,
-	// 						zoomControl: false,
-	// 						disableDefaultUI: true
-	// 					};
-	// 				} else {
-	// 					var myOptions = {
-	// 						zoom: 17,
-	// 						center: markerlatlng,
-	// 						mapTypeId: google.maps.MapTypeId.ROADMAP,
-	// 						mapTypeControl: false,
-	// 						scrollwheel: false,
-	// 						draggable: true,
-	// 						panControl: false,
-	// 						zoomControl: false,
-	// 						disableDefaultUI: true
-	// 					};
-	// 				}
-	// 				var map = new google.maps.Map(current_map[0], myOptions);
-
-	// 				var marker = new google.maps.Marker({
-	// 					map: map,
-	// 					icon: {
-	// 						size: new google.maps.Size(36,48),
-	// 						origin: new google.maps.Point(0,0),
-	// 						anchor: new google.maps.Point(18,48),
-	// 						url: point
-	// 					},
-	// 					position: markerlatlng
-	// 				});
-
-	// 				google.maps.event.addDomListener(window, "resize", function() {
-	// 					var center = map.getCenter();
-	// 					google.maps.event.trigger(map, "resize");
-	// 					map.setCenter(center);
-	// 				});
-	// 			});
-	// 		});
-	// 	};
-	// };
-
-	// $window.on('load', function () {
-
-	// 	/* google map
-	// 	================================================== */
-	// 	_g_map();
-    // });
-    
 });
 
 
