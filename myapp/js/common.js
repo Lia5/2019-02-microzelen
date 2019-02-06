@@ -44,7 +44,7 @@ function init(){
      iconLayout: 'default#imageWithContent',
      iconImageHref: 'img/icons/marker.png',
      // Размеры метки.
-     iconImageSize: [66, 100]
+     iconImageSize: [38, 58]
  });
 
 // Добавляем все метки на карту.
