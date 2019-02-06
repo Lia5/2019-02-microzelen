@@ -6,8 +6,13 @@
     }
     &__item {
         position: relative;
+        cursor: pointer;
+        &:hover .offer__name{
+            display: block;
+        }
     }
     &__name {
+        display: none;
         position: absolute;
         left: 21px;
         bottom: 41px;
