@@ -153,7 +153,7 @@ document.addEventListener('DOMContentLoaded', function(){
     });
 
 //scrolling
-if( window.innerWidth > 720 ){
+if( window.innerWidth > 720 || window.screen.width > 720){
     var linkNav = document.querySelectorAll('[href^="#"]'), //выбираем все ссылки к якорю на странице
     V = 0.25; // скорость, может иметь дробное значение через точку (чем меньше значение - тем больше скорость)
 } else {
