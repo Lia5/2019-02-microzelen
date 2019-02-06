@@ -153,8 +153,14 @@ document.addEventListener('DOMContentLoaded', function(){
     });
 
 //scrolling
-var linkNav = document.querySelectorAll('[href^="#"]'), //выбираем все ссылки к якорю на странице
-V = 0.3; // скорость, может иметь дробное значение через точку (чем меньше значение - тем больше скорость)
+if( window.innerWidth > 720 ){
+    var linkNav = document.querySelectorAll('[href^="#"]'), //выбираем все ссылки к якорю на странице
+    V = 0.25; // скорость, может иметь дробное значение через точку (чем меньше значение - тем больше скорость)
+} else {
+var linkNav = document.querySelectorAll('.main-menu [href^="#"]'), //выбираем все ссылки к якорю на странице
+V = 0; // скорость, может иметь дробное значение через точку (чем меньше значение - тем больше скорость)
+}
+
 for (var i = 0; i < linkNav.length; i++) {
 linkNav[i].addEventListener('click', function (e) { //по клику на ссылку
     e.preventDefault(); //отменяем стандартное поведение
@@ -176,13 +182,18 @@ linkNav[i].addEventListener('click', function (e) { //по клику на сс�
     }
     var nav = document.querySelector('.main-menu');
     nav.classList.toggle('active');
-    var nav2 = document.querySelector('.main-wrap');
-    nav2.classList.toggle('active');
-    var nav3 = document.querySelector('.menu-toggle');
-    nav3.classList.toggle('active');
+    if( window.innerWidth <= 720 ){
+        var nav2 = document.querySelector('.main-wrap');
+        nav2.classList.toggle('active');
+        var nav3 = document.querySelector('.menu-toggle');
+        nav3.classList.toggle('active');
+    }
+
 }, false);
 
 }
+
+
 
 
 
