@@ -153,6 +153,7 @@ document.addEventListener('DOMContentLoaded', function(){
     });
 
 //scrolling
+
 if( window.innerWidth > 720 || window.screen.width > 720){
     var linkNav = document.querySelectorAll('[href^="#"]'), //выбираем все ссылки к якорю на странице
     V = 0.25; // скорость, может иметь дробное значение через точку (чем меньше значение - тем больше скорость)
@@ -182,7 +183,7 @@ linkNav[i].addEventListener('click', function (e) { //по клику на сс�
     }
     var nav = document.querySelector('.main-menu');
     nav.classList.toggle('active');
-    if( window.innerWidth <= 720 ){
+    if( window.innerWidth <= 720 || window.screen.width <= 720){
         var nav2 = document.querySelector('.main-wrap');
         nav2.classList.toggle('active');
         var nav3 = document.querySelector('.menu-toggle');
