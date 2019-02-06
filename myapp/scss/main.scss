@@ -131,11 +131,19 @@ ul,li {
 	&:hover {
 		background-color: rgba(252, 166, 127, 0.8);
 	}
+	&--black {
+		background-color: #434343;
+		&:hover {
+			background-color: rgba(67, 67, 67, 0.8);
+		}
+	}
 }
 
 @import "sections/header"; 
 @import "sections/offer"; 
 @import "sections/why"; 
+@import "sections/reviews"; 
+@import "sections/map"; 
 
 @import "sections/footer"; 
 

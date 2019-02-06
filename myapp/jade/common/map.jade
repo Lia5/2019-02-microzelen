@@ -1,0 +1,22 @@
+section.map#map
+    .g_map.map1.active(data-block="map1", data-longitude="55.033607", data-latitude="82.931080", data-markerlng="55.033485", data-markerlat="82.933137")
+    .wrap
+        .map__cont
+            aside
+                h2.map-title Написать нам
+                .map__block
+                    form(action="#")
+                        .form-line
+                            input#name(type='text', name='name', placeholder='Ваше имя', required='')
+                        .form-line
+                            input#email(type='email', name='email', placeholder='Ваш Email', required='')
+                        .form-line
+                            textarea#text(name='text', placeholder='Текст Вашего сообщения', rows='4')
+                        .agree-line
+                            input#agree(type='checkbox', checked='', disabled)
+                            label(for='agree') Я даю согласие на обработку моих персональных данных
+                        .form-line
+                            button.btn.btn--black(type='submit') Написать
+
+
+
