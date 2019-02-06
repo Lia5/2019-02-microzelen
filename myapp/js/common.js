@@ -22,78 +22,110 @@ $(function() {
           arrows: false
         });
       }
-	//BEGIN map func
-	var $window      = $(window);
-	/* google map
-	================================================== */
-	function _g_map ()
-	{
-		var maps = $('.g_map');
+// MAP
+    
+ymaps.ready(init);
+function init(){     
+   var myMap = new ymaps.Map("map1", {
+        center: [55.729012, 37.629215],
+        zoom: 15
+    }),
+    
+    // Создаем метку с помощью вспомогательного класса.
+    myPlacemark1 = new ymaps.Placemark([55.729012, 37.629215], {
+     // Свойства.
+     // Содержимое иконки, балуна и хинта.
+     balloonContentBody: 'Микрозелень',
+    balloonContentFooter: 'Москва, ул.Зацепа 41, офис 107',
+    hintContent: 'АМикрозелень'
+ }, {
+     // Опции.
+     // Своё изображение иконки метки.
+     iconLayout: 'default#imageWithContent',
+     iconImageHref: 'img/icons/marker.png',
+     // Размеры метки.
+     iconImageSize: [66, 100]
+ });
 
-		if ( maps.length > 0 )
-		{
-			$.getScript('https://maps.googleapis.com/maps/api/js?key=AIzaSyB0wsyY6xwU9aKjmNg2pwGn3a1vchIqyBc&sensor=false&language=ru', function( data, textStatus, jqxhr ) {
+// Добавляем все метки на карту.
+myMap.geoObjects.add(myPlacemark1);
+myMap.behaviors.disable('scrollZoom');
 
-				maps.each(function() {
-					var current_map = $(this);
-					var latlng = new google.maps.LatLng(current_map.attr('data-longitude'), current_map.attr('data-latitude'));
-					var point = current_map.attr('data-marker');
-					var markerlatlng = new google.maps.LatLng(current_map.attr('data-markerlng'), current_map.attr('data-markerlat'));
+};
+ // end MAP
 
-					if (jQuery(window).width() >= 801 ){
-						var myOptions = {
-							zoom: 17,
-							center: latlng,
-							mapTypeId: google.maps.MapTypeId.ROADMAP,
-							mapTypeControl: false,
-							scrollwheel: false,
-							draggable: true,
-							panControl: false,
-							zoomControl: false,
-							disableDefaultUI: true
-						};
-					} else {
-						var myOptions = {
-							zoom: 17,
-							center: markerlatlng,
-							mapTypeId: google.maps.MapTypeId.ROADMAP,
-							mapTypeControl: false,
-							scrollwheel: false,
-							draggable: true,
-							panControl: false,
-							zoomControl: false,
-							disableDefaultUI: true
-						};
-					}
-					var map = new google.maps.Map(current_map[0], myOptions);
+	// //BEGIN map func
+	// var $window      = $(window);
+	// /* google map
+	// ================================================== */
+	// function _g_map ()
+	// {
+	// 	var maps = $('.g_map');
 
-					var marker = new google.maps.Marker({
-						map: map,
-						icon: {
-							size: new google.maps.Size(36,48),
-							origin: new google.maps.Point(0,0),
-							anchor: new google.maps.Point(18,48),
-							url: point
-						},
-						position: markerlatlng
-					});
+	// 	if ( maps.length > 0 )
+	// 	{
+	// 		$.getScript('https://maps.googleapis.com/maps/api/js?key=AIzaSyB0wsyY6xwU9aKjmNg2pwGn3a1vchIqyBc&sensor=false&language=ru', function( data, textStatus, jqxhr ) {
 
-					google.maps.event.addDomListener(window, "resize", function() {
-						var center = map.getCenter();
-						google.maps.event.trigger(map, "resize");
-						map.setCenter(center);
-					});
-				});
-			});
-		};
-	};
+	// 			maps.each(function() {
+	// 				var current_map = $(this);
+	// 				var latlng = new google.maps.LatLng(current_map.attr('data-longitude'), current_map.attr('data-latitude'));
+	// 				var point = current_map.attr('data-marker');
+	// 				var markerlatlng = new google.maps.LatLng(current_map.attr('data-markerlng'), current_map.attr('data-markerlat'));
 
-	$window.on('load', function () {
+	// 				if (jQuery(window).width() >= 801 ){
+	// 					var myOptions = {
+	// 						zoom: 17,
+	// 						center: latlng,
+	// 						mapTypeId: google.maps.MapTypeId.ROADMAP,
+	// 						mapTypeControl: false,
+	// 						scrollwheel: false,
+	// 						draggable: true,
+	// 						panControl: false,
+	// 						zoomControl: false,
+	// 						disableDefaultUI: true
+	// 					};
+	// 				} else {
+	// 					var myOptions = {
+	// 						zoom: 17,
+	// 						center: markerlatlng,
+	// 						mapTypeId: google.maps.MapTypeId.ROADMAP,
+	// 						mapTypeControl: false,
+	// 						scrollwheel: false,
+	// 						draggable: true,
+	// 						panControl: false,
+	// 						zoomControl: false,
+	// 						disableDefaultUI: true
+	// 					};
+	// 				}
+	// 				var map = new google.maps.Map(current_map[0], myOptions);
 
-		/* google map
-		================================================== */
-		_g_map();
-    });
+	// 				var marker = new google.maps.Marker({
+	// 					map: map,
+	// 					icon: {
+	// 						size: new google.maps.Size(36,48),
+	// 						origin: new google.maps.Point(0,0),
+	// 						anchor: new google.maps.Point(18,48),
+	// 						url: point
+	// 					},
+	// 					position: markerlatlng
+	// 				});
+
+	// 				google.maps.event.addDomListener(window, "resize", function() {
+	// 					var center = map.getCenter();
+	// 					google.maps.event.trigger(map, "resize");
+	// 					map.setCenter(center);
+	// 				});
+	// 			});
+	// 		});
+	// 	};
+	// };
+
+	// $window.on('load', function () {
+
+	// 	/* google map
+	// 	================================================== */
+	// 	_g_map();
+    // });
     
 });
 
