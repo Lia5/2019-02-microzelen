@@ -19,7 +19,16 @@ $(function() {
           dots: false,
           // centerMode: true,
           focusOnSelect: true,
-          arrows: false
+          arrows: false,
+          responsive: [
+            {
+              breakpoint: 720,
+              settings: {
+                slidesToShow: 3
+              }
+            }
+
+          ]
         });
       }
 // MAP
@@ -139,6 +148,8 @@ document.addEventListener('DOMContentLoaded', function(){
         nav.classList.toggle('active');
         var navGamb = document.querySelector('.menu-toggle');
         navGamb.classList.toggle('active');
+        var mainWrap = document.querySelector('.main-wrap');
+        mainWrap.classList.toggle('active');
     });
 
 //scrolling
@@ -163,7 +174,14 @@ linkNav[i].addEventListener('click', function (e) { //по клику на сс�
             location.hash = hash // URL с хэшем
         }
     }
+    var nav = document.querySelector('.main-menu');
+    nav.classList.toggle('active');
+    var nav2 = document.querySelector('.main-wrap');
+    nav2.classList.toggle('active');
+    var nav3 = document.querySelector('.menu-toggle');
+    nav3.classList.toggle('active');
 }, false);
+
 }
 
 

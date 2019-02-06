@@ -7,7 +7,7 @@
     &__item {
         position: relative;
     }
-    .offer__name {
+    &__name {
         position: absolute;
         left: 21px;
         bottom: 41px;
@@ -36,7 +36,7 @@
         }
         
     }
-    .offer__date {
+    &__date {
         font-family: 'Oswald', Arial, Helvetica, sans-serif;
         font-weight: 500;
         font-size: 30px;
