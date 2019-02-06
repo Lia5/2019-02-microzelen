@@ -110,6 +110,9 @@ ul,li {
 	font-size: 40px;
 	text-transform: uppercase;
 	margin-bottom: 37px;
+	&--center {
+		text-align: center;
+	}
 }
 .btn {
 	position: relative;
@@ -132,6 +135,7 @@ ul,li {
 
 @import "sections/header"; 
 @import "sections/offer"; 
+@import "sections/why"; 
 
 @import "sections/footer"; 
 

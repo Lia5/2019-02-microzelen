@@ -1,0 +1,13 @@
+.why {
+    &__item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 30px;
+    }
+    &__icon {
+        min-width: 106px;
+    }
+    &__text {
+        padding: 5px 64px;
+    }
+}
