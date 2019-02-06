@@ -104,6 +104,11 @@
             padding: 10px 0px;
         }
     }
+    .header {
+        .wrap {
+            min-height: calc(100vh - 145px);
+        }
+    }
     .main-title {
         font-size: 74px;
     }
